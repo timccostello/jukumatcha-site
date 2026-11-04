@@ -607,15 +607,16 @@ a {
 }
 
 .footer-top {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 32px;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  grid-column: 1 / -1;
 }
 
 .footer-logo {
@@ -922,7 +923,6 @@ a {
   }
 
   .footer-top {
-    display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: 32px;
     row-gap: 32px;
@@ -933,7 +933,7 @@ a {
   }
 
   .site-footer nav {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 
   .footer-base {
