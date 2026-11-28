@@ -17,6 +17,9 @@
   --strike: #8a90a0;
   --duo-bg: #f7f6f2;
   --hero-fallback: #efeae2;
+  --cream: #f5efe1;
+  --matcha: #4d6a27;
+  --matcha-soft: #eef2e4;
   --content: 1200px;
   --gutter: 24px;
   --font: "Avenir Next", Avenir, "Nunito Sans", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -71,7 +74,7 @@ a {
   position: absolute;
   left: 16px;
   top: -48px;
-  z-index: 10;
+  z-index: 30;
   background: var(--ink);
   color: #fff;
   padding: 8px 12px;
@@ -195,19 +198,87 @@ a {
 }
 
 .price-now {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 32px;
+  line-height: 40px;
   color: var(--hatsu);
 }
 
 .price s {
   color: var(--strike);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   text-decoration: line-through;
+}
+
+/* Black Friday strip */
+
+.promo-strip {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 12px var(--gutter);
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+}
+
+.promo-strip strong {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.promo-sep {
+  margin-inline: 6px;
+}
+
+/* Black Friday badges and callout */
+
+.sale-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--matcha);
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.product-photo,
+.duo-media {
+  position: relative;
+}
+
+.sale-badge-card {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+}
+
+.range-intro p.sale-callout {
+  padding: 14px 18px;
+  border-left: 4px solid var(--matcha);
+  border-radius: 8px;
+  background: var(--matcha-soft);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.sale-callout strong {
+  font-weight: 700;
 }
 
 /* Header */
@@ -282,7 +353,7 @@ a {
 
 .range {
   padding: 48px 0 56px;
-  scroll-margin-top: 16px;
+  scroll-margin-top: 96px;
 }
 
 .range-intro,
@@ -310,12 +381,6 @@ a {
   line-height: 24px;
 }
 
-.range-intro p.sale-note {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 22px;
-}
 
 .products {
   display: grid;
@@ -508,7 +573,7 @@ a {
 .about {
   padding: 96px 0;
   background: var(--navy);
-  scroll-margin-top: 16px;
+  scroll-margin-top: 96px;
 }
 
 .about-inner {
@@ -540,7 +605,7 @@ a {
 .how {
   padding: 48px 0 56px;
   background: var(--how-bg);
-  scroll-margin-top: 16px;
+  scroll-margin-top: 96px;
 }
 
 .how .eyebrow {
@@ -750,8 +815,33 @@ a {
   }
 
   .price-now {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .price s {
+    font-size: 20px;
+  }
+
+  .promo-strip {
+    padding: 14px var(--gutter);
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .promo-sep {
+    margin-inline: 10px;
+  }
+
+  .sale-badge {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sale-badge-card {
+    top: 24px;
+    left: 24px;
   }
 
   .site-header {
@@ -897,7 +987,7 @@ a {
   }
 
   .duo .price-now {
-    line-height: 32px;
+    line-height: 48px;
   }
 
   .about {
@@ -984,7 +1074,7 @@ a {
 .faq {
   padding: 48px 0 56px;
   background: #fff;
-  scroll-margin-top: 16px;
+  scroll-margin-top: 96px;
 }
 
 .faq-inner {
